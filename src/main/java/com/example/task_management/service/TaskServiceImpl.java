@@ -77,7 +77,7 @@ public class TaskServiceImpl implements TaskService {
     }
     
     @Override
-    public List<TaskResponse> getTasksByUserId(TaskStatus status){
+    public List<TaskResponse> getTasksByUserStatus(TaskStatus status){
         
         return taskRepository.findByStatus(status)
                 .stream()

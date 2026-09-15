@@ -52,6 +52,6 @@ public class TaskController {
     @GetMapping("/status/{status}")
     public List<TaskResponse> getTasksByStatus(
             @PathVariable TaskStatus status){
-        return taskService.getTasksByUserId(status);
+        return taskService.getTasksByUserStatus(status);
     }
 }

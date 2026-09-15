@@ -18,5 +18,5 @@ public interface TaskService {
     
     void deleteTask(Long id);
     
-    List<TaskResponse> getTasksByUserId(TaskStatus status);
+    List<TaskResponse> getTasksByUserStatus(TaskStatus status);
 }
