@@ -1,9 +1,9 @@
-package com.example.task_management.controller;
+package com.example.task_management.task.controller;
 
-import com.example.task_management.dto.TaskRequest;
-import com.example.task_management.dto.TaskResponse;
-import com.example.task_management.enums.TaskStatus;
-import com.example.task_management.service.TaskService;
+import com.example.task_management.task.dto.TaskRequest;
+import com.example.task_management.task.dto.TaskResponse;
+import com.example.task_management.task.enums.TaskStatus;
+import com.example.task_management.task.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

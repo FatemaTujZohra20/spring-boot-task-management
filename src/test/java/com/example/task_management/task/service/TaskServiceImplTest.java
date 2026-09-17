@@ -1,12 +1,13 @@
-package com.example.task_management.service;
+package com.example.task_management.task.service;
 
-import com.example.task_management.dto.TaskRequest;
-import com.example.task_management.dto.TaskResponse;
-import com.example.task_management.entity.Task;
-import com.example.task_management.enums.TaskPriority;
-import com.example.task_management.enums.TaskStatus;
-import com.example.task_management.exception.TaskNotFoundException;
-import com.example.task_management.repository.TaskRepository;
+import com.example.task_management.task.dto.TaskRequest;
+import com.example.task_management.task.dto.TaskResponse;
+import com.example.task_management.task.entity.Task;
+import com.example.task_management.task.enums.TaskPriority;
+import com.example.task_management.task.enums.TaskStatus;
+import com.example.task_management.task.exception.TaskNotFoundException;
+import com.example.task_management.task.repository.TaskRepository;
+import com.example.task_management.task.service.TaskServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

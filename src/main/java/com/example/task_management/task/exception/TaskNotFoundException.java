@@ -1,4 +1,4 @@
-package com.example.task_management.exception;
+package com.example.task_management.task.exception;
 
 public class TaskNotFoundException extends RuntimeException {
     

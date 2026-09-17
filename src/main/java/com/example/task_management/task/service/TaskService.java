@@ -1,8 +1,8 @@
-package com.example.task_management.service;
+package com.example.task_management.task.service;
 
-import com.example.task_management.dto.TaskRequest;
-import com.example.task_management.dto.TaskResponse;
-import com.example.task_management.enums.TaskStatus;
+import com.example.task_management.task.dto.TaskRequest;
+import com.example.task_management.task.dto.TaskResponse;
+import com.example.task_management.task.enums.TaskStatus;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.task_management.exception;
+package com.example.task_management.common.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

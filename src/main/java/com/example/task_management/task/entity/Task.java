@@ -1,7 +1,7 @@
-package com.example.task_management.entity;
+package com.example.task_management.task.entity;
 
-import com.example.task_management.enums.TaskPriority;
-import com.example.task_management.enums.TaskStatus;
+import com.example.task_management.task.enums.TaskPriority;
+import com.example.task_management.task.enums.TaskStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import lombok.*;

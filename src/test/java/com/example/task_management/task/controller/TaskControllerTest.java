@@ -1,16 +1,15 @@
-package com.example.task_management.controller;
+package com.example.task_management.task.controller;
 
-import com.example.task_management.dto.TaskResponse;
-import com.example.task_management.enums.TaskPriority;
-import com.example.task_management.enums.TaskStatus;
-import com.example.task_management.service.TaskService;
+import com.example.task_management.task.dto.TaskResponse;
+import com.example.task_management.task.enums.TaskPriority;
+import com.example.task_management.task.enums.TaskStatus;
+import com.example.task_management.task.service.TaskService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultMatcher;
 import tools.jackson.databind.ObjectMapper;
 
 import static org.mockito.ArgumentMatchers.any;
