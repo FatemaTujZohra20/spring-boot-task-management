@@ -1,7 +1,7 @@
-package com.example.task_management.repository;
+package com.example.task_management.task.repository;
 
-import com.example.task_management.entity.Task;
-import com.example.task_management.enums.TaskStatus;
+import com.example.task_management.task.entity.Task;
+import com.example.task_management.task.enums.TaskStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

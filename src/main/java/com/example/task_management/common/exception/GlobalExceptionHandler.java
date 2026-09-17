@@ -1,5 +1,7 @@
-package com.example.task_management.exception;
+package com.example.task_management.common.exception;
 
+import com.example.task_management.common.dto.ErrorResponse;
+import com.example.task_management.task.exception.TaskNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

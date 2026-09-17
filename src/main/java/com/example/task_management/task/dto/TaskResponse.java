@@ -1,7 +1,7 @@
-package com.example.task_management.dto;
+package com.example.task_management.task.dto;
 
-import com.example.task_management.enums.TaskPriority;
-import com.example.task_management.enums.TaskStatus;
+import com.example.task_management.task.enums.TaskPriority;
+import com.example.task_management.task.enums.TaskStatus;
 import lombok.Builder;
 import lombok.Getter;
 
