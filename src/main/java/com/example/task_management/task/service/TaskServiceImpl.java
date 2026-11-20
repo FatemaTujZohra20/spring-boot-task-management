@@ -8,6 +8,7 @@ import com.example.task_management.task.exception.TaskNotFoundException;
 import com.example.task_management.task.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -67,13 +68,11 @@ public class TaskServiceImpl implements TaskService {
     }
     
     @Override
-    public void deleteTask(Long id){
-        
-        if(!taskRepository.existsById(id)){
-            throw new TaskNotFoundException(id);
-        }
-        
-        taskRepository.deleteById(id);
+    @Transactional
+    public void deleteTask(Long id) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new TaskNotFoundException(id));
+        taskRepository.delete(task);
     }
     
     @Override
