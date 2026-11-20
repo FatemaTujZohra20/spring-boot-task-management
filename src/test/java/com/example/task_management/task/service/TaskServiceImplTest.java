@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -73,6 +74,38 @@ public class TaskServiceImplTest {
         );
         
         verify(taskRepository).findById(999L);
+    }
+    
+    @Test
+    void shouldDeleteTaskWhenTaskExists() {
+        
+        Task task = Task.builder()
+                .id(1L)
+                .title("Learn Spring Boot")
+                .status(TaskStatus.TODO)
+                .priority(TaskPriority.HIGH)
+                .build();
+        
+        when(taskRepository.findById(1L))
+                .thenReturn(Optional.of(task));
+        
+        taskService.deleteTask(1L);
+        
+        verify(taskRepository).delete(task);
+    }
+    
+    @Test
+    void shouldThrowExceptionWhenDeletingMissingTask() {
+        
+        when(taskRepository.findById(999L))
+                .thenReturn(Optional.empty());
+        
+        assertThrows(
+                TaskNotFoundException.class,
+                () -> taskService.deleteTask(999L)
+        );
+        
+        verify(taskRepository, never()).delete(any(Task.class));
     }
 
 }
